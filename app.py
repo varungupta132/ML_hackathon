@@ -1,5 +1,5 @@
 import streamlit as st
-from backend import tt_file, calculation
+from backend import tt_file, clc
 
 st.title("Exam Evaluation System")
 
