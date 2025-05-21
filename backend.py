@@ -12,7 +12,7 @@ nltk.download('averaged_perceptron_tagger')
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-def tt_file(file):
+def text_file(file):
     if file.name.endswith(".pdf"):
         with pdfplumber.open(file) as pdf:
             text = ""
