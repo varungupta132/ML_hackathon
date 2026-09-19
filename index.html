@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Exam Evaluation System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .tech-stack h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .tech-badge {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 2px solid #667eea;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .setup-section {
+            background: #e3f2fd;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .setup-section h2 {
+            color: #1976d2;
+            margin-bottom: 20px;
+        }
+
+        .setup-section pre {
+            background: #263238;
+            color: #aed581;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .setup-section code {
+            font-family: 'Courier New', monospace;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Automated Exam Evaluation System</h1>
+            <p>AI-Powered Grading with OCR, NLP & Machine Learning</p>
+        </div>
+
+        <div class="content">
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>OCR Technology</h3>
+                    <p>Advanced Optical Character Recognition to digitize handwritten and printed exam sheets from PDFs and images.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h3>AI Evaluation</h3>
+                    <p>Intelligent grading using TF-IDF vectorization and cosine similarity for accurate answer comparison.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Multiple Exam Types</h3>
+                    <p>Support for MCQs, Short Answers, and Essays with customized evaluation criteria for each type.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">✍️</div>
+                    <h3>Grammar Checking</h3>
+                    <p>Built-in grammar correction and error detection for essay-type questions using TextBlob.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Instant Feedback</h3>
+                    <p>Get detailed feedback for each question with similarity scores and improvement suggestions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🎯</div>
+                    <h3>Easy to Use</h3>
+                    <p>Simple web interface built with Streamlit - just upload files and get results instantly.</p>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <h2>🛠️ Technology Stack</h2>
+                <div class="tech-list">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Streamlit</span>
+                    <span class="tech-badge">Tesseract OCR</span>
+                    <span class="tech-badge">pdfplumber</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">NLTK</span>
+                    <span class="tech-badge">TextBlob</span>
+                    <span class="tech-badge">TF-IDF</span>
+                </div>
+            </div>
+
+            <div class="setup-section">
+                <h2>🚀 Quick Setup</h2>
+                <p><strong>Step 1:</strong> Clone the repository</p>
+                <pre><code>git clone https://github.com/varungupta132/ML_hackathon.git
+cd ML_hackathon</code></pre>
+
+                <p><strong>Step 2:</strong> Install dependencies</p>
+                <pre><code>pip install -r requirements.txt</code></pre>
+
+                <p><strong>Step 3:</strong> Install Tesseract OCR</p>
+                <p style="margin: 10px 0;">Download and install from: <a href="https://github.com/tesseract-ocr/tesseract" target="_blank" style="color: #1976d2;">Tesseract GitHub</a></p>
+
+                <p><strong>Step 4:</strong> Run the application</p>
+                <pre><code>streamlit run app.py</code></pre>
+            </div>
+
+            <div class="cta-section">
+                <h2>Ready to Get Started?</h2>
+                <p style="margin-bottom: 30px;">Check out the code and start using the system today!</p>
+                <a href="https://github.com/varungupta132/ML_hackathon" class="btn" target="_blank">View on GitHub</a>
+                <a href="https://github.com/varungupta132/ML_hackathon/blob/main/README.md" class="btn" target="_blank">Documentation</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Developed for Machine Learning Hackathon at GLA University, Mathura</p>
+            <p>© 2024 Varun Gupta | MIT License</p>
+        </div>
+    </div>
+</body>
+</html>
