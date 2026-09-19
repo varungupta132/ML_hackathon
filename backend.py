@@ -18,6 +18,9 @@ except:
 # Tesseract configuration - will work on different systems
 if os.name == 'nt':  # Windows
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+# For Linux/Cloud deployment (Streamlit Cloud)
+elif os.name == 'posix':
+    # Tesseract will be auto-detected from packages.txt
 
 def text_file(file):
     """Extract text from PDF or image files"""
